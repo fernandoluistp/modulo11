@@ -1,3 +1,9 @@
+:root {
+    --azul-padrao: #385874;
+    --dourado-padrao: #db9e42;
+}
+
+
 html{
     font-size: 62.5%;
 }
@@ -13,7 +19,7 @@ body{
 .main-container{
     display: block;
     margin: 0 auto;
-    background: linear-gradient(45deg, #ece1e9, #cddbe7);
+    background: linear-gradient(45deg, #ede5d3, #cddbe7);
 }
 
 header{
@@ -56,7 +62,7 @@ section nav{
     width: 20%;
 }
 nav ul{
-    background: #ffffffcc;
+    background: #ffffff66;
     border-radius: 1rem;
     margin: 0rem 2rem 0rem 0rem;
     padding: 0.5rem 0rem 1.5rem 0rem;
@@ -70,7 +76,7 @@ nav li{
 }
 
 nav li:hover{
-    background: #e9ecf1;
+    background: #ffffff66;
     border-radius: 0.5rem;
 
 }
@@ -91,15 +97,77 @@ section article.conteudo-principal {
 }
 
 section article.form-box {
-    margin-left:20%;
+    /*margin-left:20%;
     padding: 4rem;
     border: 0.2rem solid white;
-    border-radius: 1rem;
+    border-radius: 1rem;*/
 }
 
 .clear{
     clear: both;
 }
+
+/* Banner */ 
+
+#banner{
+    background-image: url('../images/banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+}
+
+#banner-sobrenos{
+    background-image: url('../images/banner-sobrenos.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+}
+
+.legenda-container{
+    float: right;
+    margin: 10vh 2rem 0 0;
+    width: 30vw;
+}
+
+.legenda{
+    padding: 2rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255,255,255,0.6);
+    margin-bottom: 2rem;
+}
+
+.legenda h5 {
+    line-height: 1.5rem;
+}
+
+.legenda h4 {
+    margin-top: 0rem;
+    margin-bottom: 2rem;
+    padding: 0;
+    font-size: 3rem;
+    letter-spacing: -0.2rem;
+}
+
+.button-cta{
+    display: inline-block;
+    background:var(--dourado-padrao);
+    color: #000000;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    padding: 1rem 1.5rem;
+    width: auto;
+    box-shadow: 0rem 1.2rem 0.7rem -1rem rgb(0 0 0 / 70%);
+    text-decoration: none;
+    font-weight: 400;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    float: right;
+}
+
+/* Footer */
+
 
 footer{
     background-color: #254159;
@@ -108,6 +176,7 @@ footer{
     width: 100%;
     padding: 2rem;
     text-align: center;
+    box-shadow: 0px 0px 36px -6px #0f212f;
 }
 
 footer p{
@@ -121,7 +190,7 @@ footer small{
     display: block;
 }
 
-/* Títulos e parágrafos */
+/* TÃ­tulos e parÃ¡grafos */
 
 h1{
     font-size: 5rem;
@@ -140,7 +209,7 @@ h2{
 h3{
     font-size: 2.2rem;
     color: #385874;
-    margin-bottom: 2rem;
+    margin: 3rem 0rem;
     padding-top: 1rem;
 }
 
@@ -161,10 +230,11 @@ p{
 
 .container .box-container h2+p:first-letter {
     color: #385874!important;
-    font-size: 6rem;
+    font-size: 9rem;
     float: left;
     display: block!important;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
     font-weight: 100;
     padding: 0rem 0.2rem;
 }
@@ -181,10 +251,18 @@ ol li{
     margin-bottom: 1rem;
 }
 
+
 img {
     max-width: 100%;
     height: auto;
     margin: 2rem 0rem;
+}
+
+img.conteudo-img{
+    border-radius: 10px;
+    box-shadow: 0px 0px 35px -17px #00000044;
+    margin: 2rem 2rem 0rem 0rem;
+    float: right;
 }
 
 
@@ -192,11 +270,27 @@ img {
 #tenho-interesse{
     width: 100%;
     box-sizing: border-box;
-    background-color: #ffffff44;
+    background: radial-gradient(circle, #1c4768, #0d1d2a);
     box-shadow: 0rem -0.1rem 1.8rem -1.7rem rgb(0 0 1 / 30%);
 }
 
-/* Estilização Cognito */
+.form-box h1, .form-box p{
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto 4rem auto;
+}
+
+.form-box h1 {
+    color: var(--dourado-padrao);
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.form-box p {
+    color: #ffffff;
+}
+
+/* EstilizaÃ§Ã£o Cognito */
 
 .cog-abuse.cog-wrapper, .cog-branding.cog-branding--minimal {
     display: none!important;
@@ -207,23 +301,27 @@ img {
 }
 
 .cog-cognito {
-    margin: 0!important;
-    padding: 0!important;
+    margin: 0px auto!important;
+    border: 1px solid #38698d!important;
+    border-radius: 10px!important;
+    padding: 2rem!important;
+    background: linear-gradient(45deg, #193f5c,#122a3d8c,#19405d)!important;
+    box-shadow: 0px 0px 22px -6px #0f212f!important;
 }
 
 #tenho-interesse h1.cog-heading {
-    color: #385874;
+    color: var(--dourado-padrao);
     font-family: 'Open Sans', sans-serif;
 }
 
 #tenho-interesse label {
-    color: #385874;
+    color: var(--dourado-padrao);
     font-family: 'Open Sans', sans-serif;
 }
 
 .cog-cognito input {
     border-radius: .5rem!important;
-    font-size: 2rem!important;
+    font-size: 1.5rem!important;
     font-family: 'Open Sans'!important;
     font-weight: 300!important;
 }
@@ -232,10 +330,11 @@ img {
     border-radius: .5rem!important;
     font-size: 2rem!important;
     font-family: 'Open Sans'!important;
-    background-color: #254159!important;
-    font-weight: 400!important;
+    background-color: #db9e42!important;
+    font-weight: 600!important;
     border:none!important;
     width: 100%!important;
+    color: #254159!important;
 }
 
 @media (max-width: 1024px){
@@ -243,8 +342,20 @@ img {
         margin: 0.2rem 1rem 0.2rem 1rem;
         padding: 1rem 0.8rem;
     }
+
+    img.conteudo-img {
+        margin: 2rem 0rem;
+        float: none;
+    }  
+
+    
 }
 @media (max-width: 425px){
+
+    img.conteudo-img {
+        margin: 2rem 0rem;
+        float: none;
+    }    
 
     header .container{
         text-align: center;
@@ -273,7 +384,14 @@ img {
 
     section article.form-box {
         margin-left:0%;
-        padding: 2rem;
+        padding: 1rem;
+    }
+
+    .legenda-container {
+        float: right;
+        margin: 0.5rem;
+        width: 60vw;
+        text-align: right;
     }
     
 }
@@ -286,5 +404,6 @@ img {
     h1{
         font-size: 4rem;
     }
+
 
 }
